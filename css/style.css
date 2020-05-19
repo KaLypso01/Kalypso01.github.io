@@ -1,0 +1,386 @@
+/*COLOUR SCHEME----------------------------
+
+   WHITE : e2e8e4
+    CRED : ba1d40
+    DRED : 8b2442
+    LPURPLE : 2f3047
+    BLUE : 002d40
+#f7eda4 - YELLOW
+#00000c
+e74c3c*/
+
+
+*{
+    margin:0;
+    padding:0;
+    
+    
+}
+
+body{
+    font-size: 160px;
+    background-color: #262626;
+    color:#ebebeb;
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
+    overflow: hidden;
+    
+}
+
+h1{
+    font-size: 37%;
+    font-weight: 100;
+}
+
+h2{
+    font-size: 18%;
+    font-weight: 300;
+}
+
+h4{
+    font-size:25%;
+    font-weight: 300;
+}
+h3{
+    font-size:15%;
+}
+p{
+    font-size: 12%;
+}
+hr{
+     border: none;
+    height: 2px;
+    margin-left:25%;
+    width:50%;
+    /* Set the hr color */
+    color: ##4bcde5; /* old IE */
+    background-color: ##4bcde5; /* Modern Browsers */
+}
+/*-------------------------------------------------------------LOADER----*/
+#load{
+    z-index:7;
+    min-width:100vw;
+    min-height: 100vh;
+    background-color: #262626;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+#load h1{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    transition: all 4s ease;
+}
+.show{
+    animation:shw 6s ease;
+    transition: all 4s ease;
+    animation-fill-mode: forwards;
+}
+
+.hide{
+    animation:hid 3s ease;
+    transition: all 3s ease;
+    animation-fill-mode: forwards;
+}
+
+.wholebody{
+    animation:shw2 4s ease;
+    animation-fill-mode: forwards;
+}
+/*-------------------------------------------------------------ANIMATIONS*/
+@keyframes shw2{
+    0%{
+        opacity: 0;
+        transform: translate(10px,10px);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0,0);
+    }
+}
+@keyframes shw{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes hid{
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        display: none;
+    }
+}
+
+
+
+
+/*-------------------------------------------------------------Shutter*/
+
+#shutter{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none;
+    position: absolute;
+    
+}
+#shutter div:nth-child(1){
+    position: absolute;
+    left:-80vh;
+    width: 50vw;
+    min-height: 100vh;
+    background: red;
+    border-right: 20px solid white;
+}
+#shutter div:nth-child(2){
+    border-left:20px solid white;
+    position: absolute;
+    right:-80vh;
+    width: 50vw;
+    min-height: 100vh;
+    background: blue;
+}
+/*------------------------------------------------------------------*/
+#landing{
+   
+    padding-top:10vh;
+    max-height: 100vh;
+}
+#centre_img{
+    
+    text-align: center;
+    
+}
+#centre_head{
+    text-align:center;
+    margin-top:30px;
+    
+}
+#centre_quote {
+    
+    margin-top:10px;
+    text-align: center;
+}
+#centre_quote p{
+    font-style: italic;
+}
+#centre_quote h3{
+    color:#4bcde5;
+    transition:all 0.5s ease;
+}
+#centre_quote h3:hover{
+    font-size:16%;
+    color:#91dbe8;
+    cursor: pointer;
+}
+.contact_email{
+    margin-top:80px
+}
+.contact_email p,.contact_else p{
+    font-weight: 300;
+    padding:10px;
+}
+.contact_email i,.contact_else i{
+    color:#4bcde5;
+    
+}
+.contact_email,.contact_else{
+    margin-left:-20px;
+}
+#pic{
+    width:200px;
+    border-radius: 50%;
+    
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+#centre_img span:before{
+    
+    background-size: 150px;
+     width:220px;
+    content: "";
+    height: 220px;
+    border-radius: 50%;
+    background:url(img/dots.png) repeat;
+    background-size:150px;
+    transform: translate(40px,-10px);
+    position: fixed;
+    z-index: -2;
+    
+    
+}
+
+#right_aka{
+    text-align: right;
+    margin-top:10px;
+    transition: all 0.5s;
+    
+}
+
+
+#right_aka span{
+    font-weight: 100;
+    color:#4bcde5;
+}
+    
+/*-------------------------------------------------------------SKILLS----*/
+
+#content{
+    
+    margin-top:10vh;
+    text-align: center;
+}
+#content div{
+    margin:50px 20px 0 50px ;
+}
+#content div h4{
+    margin-bottom: 20px;
+}
+
+#skills{
+    width:100vw;height:100vh;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #262626;
+    
+    transition: all 3s ease-in-out;
+}
+#back{
+    position: absolute;
+    
+    font-size:60px;
+    top:30px;
+    right:0;
+    z-index: 22;
+    border: 3px solid;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+#events{
+    margin-top:5vh;
+    padding: 20px;
+    text-align: center;  
+}
+#events div{
+    margin-bottom: 40px;
+}
+
+#event h1{
+    margin-bottom: 0 !important;
+}
+#events img{
+    margin-top:10px;
+    margin-bottom:10px;
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+    
+}
+
+/*-----------------------------------------------------------QUERIES-----*/
+    
+@media only screen and (max-width:1200px){
+    body{
+        font-size:140px;
+    }
+    #landing{
+        padding-top:10vh;
+    }
+}
+
+@media only screen and (max-width:992px){
+    body{
+        font-size:120px;
+    }
+    #lines_ul li:nth-child(4){
+        display: none;
+    
+    }
+    #back{
+        font-size:40px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    body{
+        font-size:110px;
+    }
+    #landing{
+        padding-top:12vh;
+    }
+    #pic{
+        width:160px;
+    }
+    
+    #centre_img span:before{
+
+         width:180px;
+        height: 180px;
+    }
+    #lines_ul li:nth-child(3){
+        display: none;
+    
+    }
+    #back{
+        font-size:30px;
+    }
+}
+@media only screen and (max-width:576px){
+    body{
+        font-size:90px;
+    }
+    #back{
+        font-size:20px;
+    }
+    #landing{
+        padding-top:12vh;
+    }
+    #pic{
+        width:140px;
+    }
+    h1{
+        font-size: 28%;
+    }
+    #centre_img span:before{
+
+         width:160px;
+        height: 160px;
+    }
+    #centre_quote{
+        margin-top:30px;
+    }
+    .contact_email p,.contact_else p,.contact_email i,.contact_else i{
+    padding:0;
+   margin-left:10px;
+    }
+    #lines_ul li:nth-child(2){
+        display: none;
+    
+    }
+    #lines_ul li:nth-child(1){
+        background: #4bcde5 !important;
+    
+    }
+}
+
+@media only screen and (max-width:380){
+    #contact_else{
+        margin-top:5px;
+    }
+}
+
