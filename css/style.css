@@ -254,14 +254,14 @@ hr{
 #skills{
     width:100vw;height:100vh;
     position: absolute;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     background: #262626;
     
     transition: all 3s ease-in-out;
 }
 #back{
-    position: absolute;
+    position: fixed;
     
     font-size:60px;
     top:30px;
@@ -313,6 +313,10 @@ hr{
     }
     #back{
         font-size:40px;
+        right:20px;
+    }
+    #skills{
+        overflow-y: scroll;
     }
 }
 
